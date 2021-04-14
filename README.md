@@ -1,3 +1,3 @@
-# mukul-bio-simple-html, verions 2
+# mukul-bio-simple-html 2.0
 
 simple html/css website
