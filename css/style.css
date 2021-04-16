@@ -88,6 +88,9 @@ h1 span.text-accent {
 .faqs-item p {
     margin: 0;
 }
+.faqs {
+    word-break: break-word;
+}
 .faqs :is(header, .faq-question) {
     font-weight: 500;
     font-style: italic;
