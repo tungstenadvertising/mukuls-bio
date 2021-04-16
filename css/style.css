@@ -90,6 +90,7 @@ h1 span.text-accent {
 }
 .faqs {
     word-break: break-word;
+    margin-top: 2em;
 }
 .faqs :is(header, .faq-question) {
     font-weight: 500;
