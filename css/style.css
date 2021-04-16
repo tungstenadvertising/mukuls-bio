@@ -1,12 +1,47 @@
+:root {
+    --blue: #265bb1;
+    --orange: #F68E1E;
+
+    --font-abril: 'Abril Fatface', cursive;
+    --font-acme: 'Acme', sans-serif;
+    --font-barlow: 'Barlow', sans-serif;
+}
+
+
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
     padding: 0;
+
+    font-family: var(--font-barlow);
+    font-weight: 300;
 }
 img {
     width: 100%;
+}
+blockquote {
+    font-family: var(--font-abril);
+    color: var(--blue);
+    padding-left: clamp(0.1em, 1vw, 1.1em);
+    font-size: clamp(1.2em, 6vw, 1.6em);
+}
+a {
+    color: var(--blue);
+}
+h1 {
+    font-family: var(--font-abril);
+    color: var(--blue);
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: clamp(30px, 6vw, 42px);
+    margin-bottom: 1.2em;
+}
+
+h1 span.text-accent {
+    display: block;
 }
 .container {
     max-width: 650px;
@@ -14,39 +49,62 @@ img {
     margin: 0 auto;
 }
 .text-content {
-    padding: 0 2em;
-    font-size: clamp(18px, 3vw, 22px);
+    padding: 0 clamp(24px, 4vw, 40px);
+    font-size: clamp(1.3em, 3.5vw, 1.6em);
     line-height: 1.3;
-    padding: 0 25px;
 }
 .text-center {
     text-align: center;
 }
-.text-uppercase {
-    text-transform: uppercase;
-}
-h1 {
-    font-weight:400;
-    color: #
-}
+
+
 .text-accent {
-    color: #F68E1E;
+    color: var(--orange);
 }
 .text-blue {
-    color: #265bb1;
+    color: var(--blue);
 }
-a {
-    color: #265bb1;
-}
-.font-abril { font-family: 'Abril Fatface', cursive; }
-.font-acme { font-family: 'Acme', sans-serif; }
-.font-barlow { font-family: 'Barlow', sans-serif; }
+
+.font-abril { font-family: var(--font-abril) }
+.font-acme { font-family: var(--font-acme)}
+.font-barlow { font-family: var(--font-barlow) }
 
 .drop-cap:first-letter {
-    font-family: 'Acme',
-    sans-serif;
+    font-family: 'Acme', sans-serif;
+    color: var(--orange);
     float: left;
-    font-size: 106.6px;
+    font-size: 3em;
     line-height: 1;
-    margin: 0 .25em 0 0;
+    margin: 0 .25em -10px 0;
+    padding-left: 15px;
+    text-align: center;
+}
+
+
+.text-content :is(b, strong) {
+    font-weight: 500;
+}
+.faqs-item {margin: 1em 0;}
+.faqs-item p {
+    margin: 0;
+}
+.faqs :is(header, .faq-question) {
+    font-weight: 500;
+    font-style: italic;
+}
+.faq-answer {
+    margin: 0;
+}
+
+/* fade animation */
+.fade-in {
+    transition-property: opacity, transform;
+    transition: 1s ease;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: none;
 }

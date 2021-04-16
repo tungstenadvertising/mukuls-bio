@@ -1,4 +1,3 @@
-
 const faders = document.querySelectorAll('.text-content .fade-content *');
 faders.forEach( el => el.classList.toggle('fade-in'));
 
