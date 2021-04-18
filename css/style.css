@@ -84,6 +84,11 @@ h1 span.text-accent {
 .text-content :is(b, strong) {
     font-weight: 500;
 }
+.text-content :is(q, .indented-italic) {
+    padding-left: 2em;
+    font-style: italic;
+    display: block;
+}
 .faqs-item {margin: 1em 0;}
 .faqs-item p {
     margin: 0;
@@ -102,8 +107,8 @@ h1 span.text-accent {
 
 /* fade animation */
 .fade-in {
-    transition-property: opacity, transform;
     transition: 1s ease;
+    transition-property: opacity, transform;
     opacity: 0;
     transform: translateY(10px);
 }
