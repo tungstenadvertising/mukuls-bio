@@ -117,3 +117,9 @@ h1 span.text-accent {
     opacity: 1;
     transform: none;
 }
+
+footer.footer {
+    padding: 2.5em 0;
+    font-size: 12px;
+    color: #777;
+}
